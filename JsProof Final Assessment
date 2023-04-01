@@ -1,0 +1,41 @@
+// create a variable to hold your NFT's
+const myNFTs = []
+
+// this function will take in some values as parameters, create an NFT object using the parameters passed to it for its metadata, and store it in the variable above.
+function mintNFT(name, age, kpopGroup, nationality, entertainment) {
+    const NFT = {
+        "name": name,
+        "age": age,
+        "kpopGroup": kpopGroup,
+        "nationality": nationality,
+        "entertainment": entertainment,
+    }
+    myNFTs.push(NFT);
+    console.log("Minted: " + name +"'s" + " Informations");
+}
+
+// create a "loop" that will go through an "array" of NFT's and print their metadata with console.log()
+function listNFTs() {
+  for(let i = 0; i < myNFTs.length; i++){
+      console.log("\nNFT:\t\t\t\t" + (i + 1));
+      console.log("Name:\t\t\t" + myNFTs[i].name);
+      console.log("Age:\t\t\t" + myNFTs[i].age);
+      console.log("Kpop Group:\t\t" + myNFTs[i].kpopGroup);
+      console.log("Nationality:\t\t" + myNFTs[i].nationality);
+      console.log("Entertainment: \t" + myNFTs[i].entertainment);
+  }
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply () {
+console.log("\n" + "Total Number of NFTs Minted: " + myNFTs.length);
+}
+
+// call your functions below this line
+mintNFT("Myoui Mina", 27, "TWICE", "Female", "JYP Entertainment");
+mintNFT("Kim Jisoo", 28, "BLACKPINK", "Female", "YG Entertainment");
+mintNFT("Choi Jisu", 22, "ITZY", "Female", "JYP Entertainment");
+mintNFT("Shon Seung-wan", 28, "RED VELVET", "Female", "SM Entertainment");
+mintNFT("Tiffany Young", 32, "GIRLS' GENERATION", "Female", "SM Entertainment");
+listNFTs();
+getTotalSupply() 
